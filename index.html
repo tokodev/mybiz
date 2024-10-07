@@ -34,7 +34,7 @@
     <title>MyBiz - Onde Sua Influência Tem Valor</title>
 
     <!--favicon icon-->
-    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="img/favicon.ico" type="image/png" sizes="16x16" />
 
     <!--google fonts-->
     <link
@@ -58,18 +58,33 @@
     <link rel="stylesheet" href="css/style.css" />
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .logo {
+        max-width: 64px; /* Largura padrão para telas menores */
+      }
+
+      @media (min-width: 801px) {
+        .logo {
+          max-width: 120px; /* Largura para telas maiores que 800px */
+        }
+      }
+      .client-say p {
+        display: block;
+    }
+
+    </style>
   </head>
   <body>
     <!--header section start-->
-    <header class="header d-none d-md-block">
+    <header class="header" id="home">
       <!--start navbar-->
-      <nav
-        class="bg-transparent"
-        style="position: absolute; top: 10px; z-index: 999; left: 14%"
-      >
-        <div class="container d-xs-none">
-          <a class="d-xs-none" href="index.html"
-            ><img src="img/logo.png" width="120" alt="logo" class="img-fluid"
+      <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+        <div class="container">
+          <a href="index.html"
+            ><img src="img/logo.png" alt="logo" class="img-fluid logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -79,7 +94,6 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            hidden
           >
             <span class="ti-menu"></span>
           </button>
@@ -87,154 +101,28 @@
           <div
             class="collapse navbar-collapse main-menu justify-content-end"
             id="navbarSupportedContent"
-            hidden
           >
-            <ul class="navbar-nav" hidden>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link page-scroll dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownHome"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Home
-                </a>
-                <div
-                  class="dropdown-menu submenu"
-                  aria-labelledby="navbarDropdownHome"
-                >
-                  <a class="dropdown-item" href="index.html">Demo Template 1</a>
-                  <a class="dropdown-item" href="index-2.html"
-                    >Demo Template 2</a
-                  >
-                  <a class="dropdown-item" href="index-3.html"
-                    >Demo Template 3</a
-                  >
-                  <a class="dropdown-item" href="index-4.html"
-                    >Demo Template 4</a
-                  >
-                  <a class="dropdown-item" href="index-5.html"
-                    >Demo Template 5</a
-                  >
-                  <a class="dropdown-item" href="index-6.html"
-                    >Demo Template 6</a
-                  >
-                  <a class="dropdown-item" href="index-7.html"
-                    >Demo Template 7</a
-                  >
-                  <a class="dropdown-item" href="index-8.html"
-                    >Demo Template 8
-                    <span class="badge text-bg-warning">New</span></a
-                  >
-                </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#about">About</a>
+                <a class="nav-link page-scroll" href="https://influencer.mybiz.international" target="_blank">Influenciar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#features">Features</a>
+                <a class="nav-link page-scroll" href="/partner.html">Anunciar</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link page-scroll" href="/community.html">A Comunidade</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link page-scroll" href="#pricing">Loja</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/app.html">App</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="#screenshots"
-                  >Screenshots</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link page-scroll dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownPage"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Pages
-                </a>
-                <div
-                  class="dropdown-menu submenu"
-                  aria-labelledby="navbarDropdownPage"
-                >
-                  <a class="dropdown-item" href="basic-login.html"
-                    >Login Page 1</a
-                  >
-                  <a class="dropdown-item" href="login.html">Login Page 2</a>
-                  <a class="dropdown-item" href="basic-sign-up.html"
-                    >Signup Page 1</a
-                  >
-                  <a class="dropdown-item" href="sign-up.html">Signup Page 2</a>
-                  <a class="dropdown-item" href="password-reset.html"
-                    >Password Reset</a
-                  >
-                  <a class="dropdown-item" href="change-password.html"
-                    >Change Password</a
-                  >
-                  <a class="dropdown-item" href="download.html"
-                    >Download Page</a
-                  >
-                  <a class="dropdown-item" href="review.html">Review Page</a>
-                  <a class="dropdown-item" href="faq.html">FAQ Page</a>
-                  <a class="dropdown-item" href="404.html">404 Page</a>
-                  <a class="dropdown-item" href="coming-soon.html"
-                    >Coming Soon</a
-                  >
-                  <a class="dropdown-item" href="thank-you.html">Thank You</a>
-                  <a class="dropdown-item" href="team.html"
-                    >Team Page
-                    <span class="badge text-bg-danger badge-pill ms-2"
-                      >New</span
-                    ></a
-                  >
-                  <a class="dropdown-item" href="team-single.html"
-                    >Team Single
-                    <span class="badge text-bg-danger badge-pill ms-2"
-                      >New</span
-                    ></a
-                  >
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link page-scroll dropdown-toggle"
-                  href="#"
-                  id="navbarBlogPage"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Blog
-                  <span class="custom-nav-badge badge text-bg-danger badge-pill"
-                    >New</span
-                  >
-                </a>
-
-                <div
-                  class="dropdown-menu submenu"
-                  aria-labelledby="navbarBlogPage"
-                >
-                  <a class="dropdown-item" href="blog-default.html"
-                    >Blog Grid</a
-                  >
-                  <a class="dropdown-item" href="blog-left-sidebar.html"
-                    >Blog Left Sidebar</a
-                  >
-                  <a class="dropdown-item" href="blog-single-right-sidebar.html"
-                    >Details Right Sidebar</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="#team">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="#contact">Contact</a>
+                <a class="nav-link page-scroll" href="https://mybiz-merchant-panel-frontend-mscs4.ondigitalocean.app/user/login" target="_blank">Login</a>
               </li>
             </ul>
           </div>
@@ -250,26 +138,25 @@
       <section
         class="hero-section pt-100 background-img"
         style="
-          background: url('https://appco.themetags.com/img/app-hero-bg.jpg')
+          background: url('img/bg-home.jpeg')
             no-repeat center center / cover;
         "
       >
         <div class="container">
-          <a class="navbar-brand d-md-none" href="index.html"
-            ><img src="img/logo.png" width="120" alt="logo" class="img-fluid"
-          /></a>
           <div class="row align-items-center justify-content-between py-5">
             <div class="col-md-7 col-lg-6 col-xl-5">
               <div class="hero-content-left text-white">
-                <h1 class="text-white fw-bold">CONQUISTE COM INFLUÊNCIA!</h1>
+                <h1 class="text-white fw-bold">MONETIZE SUA INFLUÊNCIA!</h1>
                 <p class="lead">
-                  Alcance seu público-alvo de forma autêntica com nossas
-                  campanhas de influenciadores. Conquiste resultados
-                  excepcionais!
+                  Transforme seus posts em lucro! Ganhe parte da
+                  receita de nossos Parceiros Anunciantes
+                  simplesmente divulgando nossos Ads. Com um
+                  único clique, o dinheiro vai direto para o seu
+                  bolso. É fácil, rápido e lucrativo!
                 </p>
 
                 <form
-                  action="https://hammerhead-app-qv7tt.ondigitalocean.app"
+                  action="https://oyster-app-md59y.ondigitalocean.app"
                   method="get"
                   class="subscribe-form"
                 >
@@ -279,24 +166,24 @@
                       class="form-control input"
                       id="email"
                       name="email"
-                      placeholder="email@dominio.com.br"
+                      placeholder="email@dominio.com"
                     />
                     <input
                       type="submit"
                       class="button btn solid-btn"
                       id="submit"
-                      value="Cadastre-se"
+                      value="Participar"
                     />
                   </div>
                 </form>
 
                 <div class="video-promo-content py-4 d-flex align-items-center">
                   <a
-                    href="https://www.youtube.com/watch?v=-yEeNjTQG9o"
+                    href="https://www.youtube.com/watch?v=vxpyZqKAzBc"
                     class="popup-youtube video-play-icon-without-bip video-play-icon me-3"
                     ><span class="ti-control-play"></span
                   ></a>
-                  Entenda como funciona.
+                  Como funciona a Comunidade
                 </div>
               </div>
             </div>
@@ -323,41 +210,41 @@
           <div class="row justify-content-center">
             <div class="col-lg-7 col-md-8">
               <div class="section-heading text-center mb-5">
-                <h2>Qual o seu Desejo?</h2>
-                <p class="lead d-none">
-                  Following reasons show advantages of adding AppCo to your lead
-                  pages, demos and checkouts evisculate interoperable
-                  imperatives rather.
+                <h2>Como Quer Experimentar a Comunidade MyBiz?</h2>
+                <p class="lead">
+                  Qual o seu desejo? Divulgar, Vender ou Comprar? Escolha qual
+                  opção se encaixa mais no seu perfil e participe da Mybiz agora
+                  mesmo!
                 </p>
               </div>
             </div>
           </div>
           <div class="row g-4 justify-content-center equal">
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-4 cursor-pointer"  onclick="window.location.href='https://influencer.mybiz.international'">
               <div
                 class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg p-5 h-100"
               >
                 <div class="circle-icon mb-5">
-                  <span class="ti-vector text-white"></span>
+                  <span class="ti-announcement text-white"></span>
                 </div>
                 <h5>Influenciar</h5>
                 <p>
-                  Seja um Influenciador e receba dinheiro divulgando marcas e
-                  promoções!
+                  Receber pagamentos por post! Ganhar dinheiro está nas suas
+                  mãos!
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-4 cursor-pointer" onclick="window.location.href='/partner.html'">
               <div
-                class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg p-5 h-100"
+                class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg p-5 h-100 cursor-pointer"
               >
                 <div class="circle-icon mb-5">
-                  <span class="ti-lock text-white"></span>
+                  <span class="ti-credit-card text-white"></span>
                 </div>
-                <h5>Vender</h5>
-                <p>
-                  Divulgue suas marcas e promoções Através de nossos
-                  influenciadores!
+                <h5 class="cursor-pointer">Vender</h5>
+                <p class="cursor-pointer">
+                  Deseja sua marca sendo divulgada por milhares de pessoas?
+                  Anuncie na MyBiz!
                 </p>
               </div>
             </div>
@@ -366,11 +253,12 @@
                 class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg p-5 h-100"
               >
                 <div class="circle-icon mb-5">
-                  <span class="ti-eye text-white"></span>
+                  <span class="ti-shopping-cart text-white"></span>
                 </div>
                 <h5>Comprar</h5>
                 <p>
-                  Compre os melhores produtos vendidos pelos nossos parceiros.
+                  Gostou dos produtos de nossos parceiros anunciantes? Compre em
+                  nossa loja!
                 </p>
               </div>
             </div>
@@ -380,16 +268,16 @@
       <!--promo section end-->
 
       <!--overflow block start-->
-      <div class="overflow-hidden d-none">
+      <div class="overflow-hidden">
         <!--about us section start-->
-        <section id="about" class="about-us ptb-100 background-shape-img">
+        <section id="about" class="about-us ptb-5 background-shape-img">
           <div class="container">
             <div class="row align-items-center justify-content-between">
               <div class="col-md-7 col-xl-6">
                 <div class="about-content-left section-heading">
                   <h2>
-                    Use Your Android or ios Device <br />
-                    to Manage Everything
+                    Use seu Iphone ou Android para<br />
+                    Ganhar Dinheiro Agora Mesmo!
                   </h2>
 
                   <div class="single-feature mb-4 mt-5">
@@ -402,9 +290,8 @@
                         />
                       </div>
                       <p class="mb-0">
-                        Proactively syndicate open-source e-markets after
-                        low-risk high-yield synergy. Professionally simplify
-                        visionary technology.
+                        MyBiz é uma Comunidade onde todos podem ganhar,
+                        administrar e investir dinheiro.
                       </p>
                     </div>
                   </div>
@@ -418,9 +305,8 @@
                         />
                       </div>
                       <p class="mb-0">
-                        Intrinsicly aggregate cutting-edge internal or "organic"
-                        sources through pandemic manufactured products.
-                        Synergistically.
+                        Funciona como uma plataforma onde os membros podem gerar
+                        renda, aplicar seus ganhos e administrar suas finanças.
                       </p>
                     </div>
                     <p></p>
@@ -435,9 +321,8 @@
                         />
                       </div>
                       <p class="mb-0">
-                        Completely administrate empowered e-tailers after
-                        extensive experiences. Holisticly leverage existing
-                        quality networks.
+                        Isso é possível através da divulgação de anúncios de
+                        nossos Parceiros Anunciantes!
                       </p>
                     </div>
                     <p></p>
@@ -452,9 +337,7 @@
                         />
                       </div>
                       <p class="mb-0">
-                        Intrinsicly incentivize functionalized metrics whereas
-                        go forward networks. Collaboratively fabricate
-                        clicks-and-mortar intellectual.
+                        Uma Comunidade focada em gerar renda pela internet!
                       </p>
                     </div>
                     <p></p>
@@ -464,9 +347,9 @@
               <div class="col-md-5">
                 <div class="about-content-right">
                   <img
-                    src="img/image-11.png"
+                    src="img/phone-frame2.png"
                     alt="about us"
-                    class="img-fluid"
+                    class="img-fluid mt-5"
                   />
                 </div>
               </div>
@@ -478,7 +361,7 @@
       <!--overflow block end-->
 
       <!--feature section start-->
-      <section id="features" class="feature-section ptb-100 d-none">
+      <section id="features" class="feature-section ptb-100">
         <div class="container">
           <div class="row g-4 align-items-center justify-content-between">
             <div class="col-md-4">
@@ -489,18 +372,16 @@
             <div class="col-md-7">
               <div class="feature-contents section-heading">
                 <h2>
-                  Share your Photos with <br />
-                  Friends Easily
+                  Compartilhe nossos ADS para <br />seus Amigos facilmente!
                 </h2>
                 <p>
-                  Objectively deliver professional value with diverse
-                  web-readiness. Collaboratively transition wireless customer
-                  service without goal-oriented catalysts for change.
-                  Collaboratively.
+                  Gerando Renda Extra para nossos membros através de divisão de
+                  Receita dos Anúncios de Parceiros Patrocinadores.
                 </p>
                 <p>
-                  Uniquely simplify sustainable applications whereas adaptive
-                  schemas. Competently brand performance based content and.
+                  Buscamos sempre parceiros anunciantes de produtos e serviços
+                  para patrocinarem nossos membros e assim divulgarem suas
+                  marcas e promoções.
                 </p>
 
                 <ul class="list-inline mt-5">
@@ -550,9 +431,10 @@
 
       <!--download section start-->
       <section
-        class="download-section pt-100 background-img d-none"
+        class="download-section pt-100 background-img"
         style="
-          background: url('img/app-hero-bg.jpg') no-repeat center center / cover;
+          background: url('https://appco.themetags.com/img/app-hero-bg.jpg')
+            no-repeat center center / cover;
         "
       >
         <div class="container">
@@ -560,13 +442,12 @@
             <div class="col-md-7">
               <div class="download-content text-white pb-100">
                 <h2 class="text-white">
-                  Start Managing your Apps Business, more Faster
+                  Gere Renda, Gerencie, Invista, Compre, Anuncie.
                 </h2>
                 <p class="lead">
-                  Objectively deliver professional value with diverse
-                  web-readiness. Collaboratively transition wireless customer
-                  service without goal-oriented catalysts for change.
-                  Collaboratively.
+                  Transforme seus posts em lucro! 
+                  Ganhe parte da receita de nossos Parceiros Anunciantes simplesmente divulgando nossos Ads. 
+                  Com um único clique, o dinheiro vai direto para o seu bolso. É fácil, rápido e lucrativo!
                 </p>
 
                 <div class="download-btn">
@@ -594,7 +475,7 @@
       <!--download section end-->
 
       <!--overflow block start-->
-      <div class="overflow-hidden d-none">
+      <div class="overflow-hidden">
         <!--our pricing packages section start-->
         <section
           id="pricing"
@@ -605,12 +486,16 @@
               <div class="col-md-8">
                 <div class="section-heading text-center mb-5">
                   <h2>
-                    Affordable Pricing and Packages <br />Choose your Best One
+                    Tem um negócio?<br />
+                    Seja um parceiro anunciante!
                   </h2>
                   <p class="lead">
-                    Distinctively brand cutting-edge imperatives through
-                    synergistic infrastructures customize low-risk high-yield
-                    processes rather than user friendly.
+                    Faça parte da MyBiz e patrocine nossos influencers! É fácil,
+                    você contrata um plano mensal, cria em nossa plataforma as
+                    promoções e libera para nossos influencers divulgarem! E
+                    mais, você terá acesso a um mailling exclusivo para enviar
+                    suas promoções de forma direcionada, uma loja para cadastrar
+                    o seus produtos e muito mais!
                   </p>
                 </div>
               </div>
@@ -618,7 +503,7 @@
             <div class="row g-4 justify-content-center">
               <div class="col-xl-4 col-md-6">
                 <div class="card text-center single-pricing-pack p-5">
-                  <h5 class="mb-2">Basic</h5>
+                  <h5 class="mb-2">Metropolis</h5>
                   <div class="pricing-img mt-3 mb-4">
                     <img
                       src="img/basic.svg"
@@ -628,21 +513,23 @@
                   </div>
 
                   <div class="card-body p-0">
+                    <h5 style="font-size: 14px;">Abrangência Local:</h5>
                     <ul class="list-unstyled text-sm pricing-feature-list">
-                      <li>5 Users access same time</li>
-                      <li>Integrated eCommerce</li>
-                      <li>Customization interface</li>
-                      <li>Weekly updated</li>
-                      <li>24/7 Phone Support</li>
-                      <li>Event Analytics</li>
+                      <li>Divulgação por Influencers;</li>
+                      <li>Campanha Direcionada para a Base de Influencers;</li>
+                      <li>Publicação em Guias de Parceiros por Geolocalização (Em Breve);</li>
+                      <li>Distribuição de Produtos Via Assinatura (Em Breve);</li>
+                      <li>Marketplace Sem Custo para Promoções;</li>
+                      <li>Push Marketing;</li>
+                      <li>Outras Vantagens;</li>
                     </ul>
                     <div class="py-4 border-0 pricing-header">
                       <div class="h1 text-center mb-0 color-secondary">
-                        $<span class="price fw-semibold">29</span>
+                        $<span class="price fw-semibold"> 20</span> USD
                       </div>
                     </div>
-                    <a href="#" class="btn outline-btn" target="_blank"
-                      >Purchase now</a
+                    <a href="https://oyster-app-md59y.ondigitalocean.app/" class="btn outline-btn" target="_blank"
+                      >Assine</a
                     >
                   </div>
                 </div>
@@ -651,7 +538,7 @@
                 <div
                   class="card text-center popular-price single-pricing-pack p-5"
                 >
-                  <h5 class="mb-2">Standard</h5>
+                  <h5 class="mb-2">Explorer</h5>
                   <div class="pricing-img mt-3 mb-4">
                     <img
                       src="img/standard.svg"
@@ -661,28 +548,28 @@
                   </div>
 
                   <div class="card-body p-0">
+                    <h5 style="font-size: 14px;">Abrangência Regional:</h5>
                     <ul class="list-unstyled text-sm pricing-feature-list">
-                      <li>10 Users access same time</li>
-                      <li>Integrated eCommerce</li>
-                      <li>Customization interface</li>
-                      <li>Daily updated</li>
-                      <li>24/7 Phone Support</li>
-                      <li>Event Analytics</li>
+                      <li>Divulgação por Influencers;</li>
+                      <li>Campanha Direcionada para a Base de Influencers;</li>
+                      <li>Publicação em Guias de Parceiros por Geolocalização (Em Breve);</li>
+                      <li>Distribuição de Produtos Via Assinatura (Em Breve);</li>
+                      <li>Marketplace Sem Custo para Promoções;</li>
+                      <li>Push Marketing;</li>
+                      <li>Outras Vantagens;</li>
                     </ul>
                     <div class="py-4 border-0 pricing-header">
                       <div class="h1 text-center mb-0 color-secondary">
-                        $<span class="price fw-semibold">145</span>
+                        $<span class="price fw-semibold"> 38</span> USD
                       </div>
                     </div>
-                    <a href="#" class="btn solid-btn" target="_blank"
-                      >Purchase now</a
-                    >
+                    <a href="https://oyster-app-md59y.ondigitalocean.app/" class="btn solid-btn" target="_blank">Assine</a>
                   </div>
                 </div>
               </div>
               <div class="col-xl-4 col-md-6">
                 <div class="card text-center single-pricing-pack p-5">
-                  <h5 class="mb-2">Unlimited</h5>
+                  <h5 class="mb-2">Vanguard</h5>
                   <div class="pricing-img mt-3 mb-4">
                     <img
                       src="img/unlimited.svg"
@@ -692,34 +579,36 @@
                   </div>
 
                   <div class="card-body p-0">
+                    <h5 style="font-size: 14px;">Abrangência Estadual:</h5>
                     <ul class="list-unstyled text-sm pricing-feature-list">
-                      <li>20 Users access same time</li>
-                      <li>Integrated eCommerce</li>
-                      <li>Fully Customization interface</li>
-                      <li>Free updated</li>
-                      <li>24/7 Phone Support</li>
-                      <li>Event Analytics</li>
+                      <li>Divulgação por Influencers;</li>
+                      <li>Campanha Direcionada para a Base de Influencers;</li>
+                      <li>Publicação em Guias de Parceiros por Geolocalização (Em Breve);</li>
+                      <li>Distribuição de Produtos Via Assinatura (Em Breve);</li>
+                      <li>Marketplace Sem Custo para Promoções;</li>
+                      <li>Push Marketing;</li>
+                      <li>Outras Vantagens;</li>
                     </ul>
                     <div class="py-4 border-0 pricing-header">
                       <div class="h1 text-center mb-0 color-secondary">
-                        $<span class="price fw-semibold">249</span>
+                        $<span class="price fw-semibold"> 54</span> USD
                       </div>
                     </div>
-                    <a href="#" class="btn outline-btn" target="_blank"
-                      >Purchase now</a
+                    <a href="https://oyster-app-md59y.ondigitalocean.app/" class="btn outline-btn" target="_blank"
+                      >Assine</a
                     >
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mt-5 text-center">
+            <div class="mt-5 text-center d-none">
               <p class="mb-2">
                 If you need custom services or Need more?
                 <a href="#" class="color-secondary"> Contact us </a>
               </p>
             </div>
             <!--pricing faq start-->
-            <div class="row mt-5">
+            <div class="row mt-5 d-none">
               <div class="col-lg-6">
                 <div id="accordion-1" class="accordion accordion-faq">
                   <!-- Accordion card 1 -->
@@ -929,16 +818,15 @@
       <!--overflow block end-->
 
       <!--testimonial section start-->
-      <section class="testimonial-section ptb-100 d-none">
+      <section class="testimonial-section ptb-100">
         <div class="container">
           <div class="row justify-content-between align-items-center">
             <div class="col-md-6">
               <div class="section-heading mb-5">
-                <h2>What Clients Say About Us</h2>
+                <h2>Acessem nossas Redes</h2>
                 <p class="lead">
-                  Rapidiously morph transparent internal or "organic" sources
-                  whereas resource sucking e-business. Conveniently innovate
-                  compelling internal.
+                  Fiquem atentos as novidades da Comunidade MyBiz em nossas
+                  Redes Sociais!
                 </p>
 
                 <div
@@ -947,24 +835,24 @@
                   <ul class="list-inline">
                     <li class="list-inline-item">
                       <img
-                        src="img/client-1-color.png"
-                        width="85"
+                        src="img/instagram.png"
+                        width="120"
                         alt="client"
                         class="img-fluid"
                       />
                     </li>
                     <li class="list-inline-item">
                       <img
-                        src="img/client-6-color.png"
-                        width="85"
+                        src="img/facebook.png"
+                        width="120"
                         alt="client"
                         class="img-fluid"
                       />
                     </li>
                     <li class="list-inline-item">
                       <img
-                        src="img/client-3-color.png"
-                        width="85"
+                        src="img/youtube.png"
+                        width="120"
                         alt="client"
                         class="img-fluid"
                       />
@@ -988,8 +876,8 @@
                         />
                       </div>
                       <div class="media-body">
-                        <h5 class="mb-0">John Charles</h5>
-                        <span>Google</span>
+                        <h5 class="mb-0">Fernando Baddini</h5>
+                        <span>MyBiz</span>
                       </div>
                     </div>
                     <div class="client-say">
@@ -999,109 +887,11 @@
                           alt="quote"
                           class="img-fluid"
                         />
-                        Interactively optimize fully researched expertise
-                        vis-a-vis plug-and-play relationships. Intrinsicly
-                        develop viral core competencies for fully tested
-                        customer service. Enthusiastically create
-                        next-generation growth strategies and.
+                        A MyBiz nasce como uma solução diferente ao do Coogle ADS, para resolver um mesmo problema.: Como levar a palavra das empresas para um público cada vez maior. Entregamos nosso alcance a criadores de conteúdos e influencers, crescendo nossa rede junto deles.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="testimonial-quote-wrap">
-                    <div class="media author-info mb-3">
-                      <div class="author-img me-3">
-                        <img
-                          src="img/client-2.jpg"
-                          alt="client"
-                          class="img-fluid rounded-circle"
-                        />
-                      </div>
-                      <div class="media-body">
-                        <h5 class="mb-0">Arabella Ora</h5>
-                        <span>Amazon</span>
-                      </div>
-                    </div>
-                    <div class="client-say">
-                      <p>
-                        <img
-                          src="img/quote.png"
-                          alt="quote"
-                          class="img-fluid"
-                        />
-                        Rapidiously develop user friendly growth strategies
-                        after extensive initiatives. Conveniently grow
-                        innovative benefits through fully tested deliverables.
-                        Rapidiously utilize focused platforms through end-to-end
-                        schemas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial-quote-wrap">
-                    <div class="media author-info mb-3">
-                      <div class="author-img me-3">
-                        <img
-                          src="img/client-1.jpg"
-                          alt="client"
-                          class="img-fluid rounded-circle"
-                        />
-                      </div>
-                      <div class="media-body">
-                        <h5 class="mb-0">Jeremy Jere</h5>
-                        <span>Themetags</span>
-                      </div>
-                    </div>
-                    <div class="client-say">
-                      <p>
-                        <img
-                          src="img/quote.png"
-                          alt="quote"
-                          class="img-fluid"
-                        />
-                        Objectively synthesize client-centered e-tailers for
-                        maintainable channels. Holisticly administrate customer
-                        directed vortals whereas tactical functionalities.
-                        Energistically monetize reliable imperatives through
-                        client-centric best practices. Collaboratively.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial-quote-wrap">
-                    <div class="media author-info mb-3">
-                      <div class="author-img me-3">
-                        <img
-                          src="img/client-1.jpg"
-                          alt="client"
-                          class="img-fluid rounded-circle"
-                        />
-                      </div>
-                      <div class="media-body">
-                        <h5 class="mb-0">John Charles</h5>
-                        <span>Google</span>
-                      </div>
-                    </div>
-                    <div class="client-say">
-                      <p>
-                        <img
-                          src="img/quote.png"
-                          alt="quote"
-                          class="img-fluid"
-                        />
-                        Enthusiastically innovate B2C data without
-                        clicks-and-mortar convergence. Monotonectally deliver
-                        compelling testing procedures vis-a-vis B2B testing
-                        procedures. Competently evisculate integrated resources
-                        whereas global processes. Enthusiastically.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1109,10 +899,9 @@
       <!--testimonial section end-->
 
       <!--our video promo section start-->
-      <section
-        class="video-promo ptb-100 background-img d-none"
+      <section class="video-promo ptb-100 background-img d-none"
         style="
-          background: url('img/hero-bg-1.jpg') no-repeat center center / cover;
+          background: url('https://appco.themetags.com/img/hero-bg-1.jpg') no-repeat center center / cover;
         "
       >
         <div class="container">
@@ -1124,7 +913,7 @@
                   class="popup-youtube video-play-icon d-inline-block"
                   ><span class="ti-control-play"></span
                 ></a>
-                <h5 class="mt-4 text-white">Watch video overview</h5>
+                <h5 class="mt-4 text-white">Conheça a MyBiz</h5>
               </div>
             </div>
           </div>
@@ -1167,17 +956,15 @@
       <!--our team section start-->
       <section
         id="team"
-        class="team-member-section ptb-100 gray-light-bg d-none"
+        class="team-member-section ptb-100 gray-light-bg"
       >
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-7 col-md-8">
               <div class="section-heading text-center mb-5">
-                <h2>Our Team Members</h2>
+                <h2>A Comunidade</h2>
                 <p class="lead">
-                  Following reasons show advantages of adding AppCo to your lead
-                  pages, foster market positioning products without demos and
-                  checkouts.
+                  A comunidade de influenciadores da MyBiz oferece uma oportunidade única para quem deseja monetizar com seus produtos ou serviços. Conheça, agora, quem já influenciou com a MyBiz:
                 </p>
               </div>
             </div>
@@ -1187,32 +974,15 @@
               <div class="single-team-member position-relative">
                 <div class="team-image">
                   <img
-                    src="img/team-4.jpg"
-                    alt="Team Members"
+                    src="img/community/matheus_ceara.jpeg"
+                    alt="Matheus Ceará"
                     class="img-fluid rounded-circle"
                   />
                 </div>
                 <div
                   class="team-info text-white rounded-circle d-flex flex-column align-items-center justify-content-center"
                 >
-                  <h5 class="mb-0">Edna Mason</h5>
-                  <h6>Senior Designer</h6>
-                  <ul
-                    class="list-inline team-social social-icon mt-4 text-white"
-                  >
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-facebook"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-twitter"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-github"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-dribbble"></span></a>
-                    </li>
-                  </ul>
+                  <h5 class="mb-0">Matheus Ceará</h5>
                 </div>
               </div>
             </div>
@@ -1220,32 +990,15 @@
               <div class="single-team-member position-relative">
                 <div class="team-image">
                   <img
-                    src="img/team-1.jpg"
-                    alt="Team Members"
+                    src="img/community/bianca_jesuino.jpeg"
+                    alt="Bianca Jesuíno"
                     class="img-fluid rounded-circle"
                   />
                 </div>
                 <div
                   class="team-info text-white rounded-circle d-flex flex-column align-items-center justify-content-center"
                 >
-                  <h5 class="mb-0">Edna Mason</h5>
-                  <h6>Senior Designer</h6>
-                  <ul
-                    class="list-inline team-social social-icon mt-4 text-white"
-                  >
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-facebook"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-twitter"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-github"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-dribbble"></span></a>
-                    </li>
-                  </ul>
+                  <h5 class="mb-0">Bianca Jesuíno</h5>
                 </div>
               </div>
             </div>
@@ -1253,7 +1006,7 @@
               <div class="single-team-member position-relative">
                 <div class="team-image">
                   <img
-                    src="img/team-2.jpg"
+                    src="img/community/eros_prado.jpeg"
                     alt="Team Members"
                     class="img-fluid rounded-circle"
                   />
@@ -1261,24 +1014,8 @@
                 <div
                   class="team-info text-white rounded-circle d-flex flex-column align-items-center justify-content-center"
                 >
-                  <h5 class="mb-0">Edna Mason</h5>
-                  <h6>Senior Designer</h6>
-                  <ul
-                    class="list-inline team-social social-icon mt-4 text-white"
-                  >
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-facebook"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-twitter"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-github"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-dribbble"></span></a>
-                    </li>
-                  </ul>
+                  <h5 class="mb-0">Eros Prado</h5>
+                  
                 </div>
               </div>
             </div>
@@ -1286,36 +1023,27 @@
               <div class="single-team-member position-relative">
                 <div class="team-image">
                   <img
-                    src="img/team-3.jpg"
-                    alt="Team Members"
+                    src="img/community/estefany_boro.jpeg"
+                    alt="Estefany Boro"
                     class="img-fluid rounded-circle"
                   />
                 </div>
                 <div
                   class="team-info text-white rounded-circle d-flex flex-column align-items-center justify-content-center"
                 >
-                  <h5 class="mb-0">Edna Mason</h5>
-                  <h6>Senior Designer</h6>
-                  <ul
-                    class="list-inline team-social social-icon mt-4 text-white"
-                  >
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-facebook"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-twitter"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-github"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="ti-dribbble"></span></a>
-                    </li>
-                  </ul>
+                  <h5 class="mb-0">Estefany Boro</h5>
+                  
                 </div>
               </div>
             </div>
+           
           </div>
+        <center>
+              <div class="action-btn mt-4">
+                <a href="/community.html" class="btn solid-btn">CONFIRA MAIS</a>
+              </div>
+            
+          </center>  
         </div>
       </section>
       <!--our team section end-->
@@ -1663,9 +1391,9 @@
     <!--body content wrap end-->
 
     <!--shape image start-->
-    <div class="shape-img subscribe-wrap">
+    <div class="shape-img subscribe-wrap gray-light-bg">
       <img
-        src="img/footer-top-shape.png"
+        src="img/footer-top-shape-2.png"
         alt="footer shape"
         class="img-fluid"
       />
@@ -1721,7 +1449,7 @@
                   class="img-fluid mb-3"
                 />
                 <p>
-                  Conheça a My Biz, sua parceira em Marketing de Influência.
+                  Conheça a MyBiz, sua parceira em Marketing de Influência.
                   Nossa rede diversificada de influenciadores garante campanhas
                   eficazes para gerar leads qualificados.
                 </p>
@@ -1729,23 +1457,18 @@
                 <div class="social-list-wrap">
                   <ul class="social-list list-inline list-unstyled">
                     <li class="list-inline-item">
-                      <a href="#" target="_blank" title="Facebook"
+                      <a href="https://www.facebook.com/mybizbr" target="_blank" title="Facebook"
                         ><span class="ti-facebook"></span
                       ></a>
                     </li>
                     <li class="list-inline-item">
-                      <a href="#" target="_blank" title="Twitter"
-                        ><span class="ti-twitter"></span
-                      ></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" target="_blank" title="Instagram"
+                      <a href="https://www.instagram.com/mybiz.global?igsh=MWkyZWc2OHhnam1sNQ==" target="_blank" title="Instagram"
                         ><span class="ti-instagram"></span
                       ></a>
                     </li>
                     <li class="list-inline-item">
-                      <a href="#" target="_blank" title="printerst"
-                        ><span class="ti-pinterest"></span
+                      <a href="https://www.linkedin.com/company/mybizclub/" target="_blank" title="Youtube"
+                        ><span class="ti-linkedin"></span
                       ></a>
                     </li>
                   </ul>
@@ -1758,11 +1481,13 @@
                   class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-sm-4 mb-md-0 mb-lg-0"
                 >
                   <div class="footer-nav-wrap text-white">
-                    <h5 class="mb-3 text-white">Menu</h5>
+                    <h5 class="mb-3 text-white">Links</h5>
                     <ul class="list-unstyled">
-                      <li class="mb-2"><a href="#">FAQ</a></li>
-                      <li class="mb-2"><a href="#">Eventos</a></li>
-                      <li class="mb-2"><a href="#">Suporte WhatsApp</a></li>
+                      <li class="mb-2"><a href="/partner.html" target="_blank">Anuncie</a></li>
+                      <li class="mb-2"><a href="/app.html" target="_blank">Android</a></li>
+                      <li class="mb-2"><a href="/app.html">Ios</a></li>
+                      <!-- <li class="mb-2"><a href="#">Loja</a></li> -->
+                      <li class="mb-2"><a href="https://mybiz-merchant-panel-frontend-mscs4.ondigitalocean.app/user/login">Login</a></li>
                     </ul>
                   </div>
                 </div>
@@ -1770,19 +1495,16 @@
                   class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-sm-4 mb-md-0 mb-lg-0"
                 >
                   <div class="footer-nav-wrap text-white">
-                    <h5 class="mb-3 text-white">My Biz</h5>
+                    <h5 class="mb-3 text-white">MyBiz</h5>
                     <ul class="list-unstyled support-list">
                       <li class="mb-2">
                         <a href="#">Quem Somos</a>
                       </li>
                       <li class="mb-2">
-                        <a href="#">Serviços</a>
+                        <a href="/community.html">Clientes e Parceiros</a>
                       </li>
                       <li class="mb-2">
-                        <a href="#">Clientes e Parceiros</a>
-                      </li>
-                      <li class="mb-2">
-                        <a href="#">Influênciadores</a>
+                        <a href="https://influencer.mybiz.international" target="_blank">Influencers</a>
                       </li>
                     </ul>
                   </div>
@@ -1791,7 +1513,7 @@
                   <div class="footer-nav-wrap text-white">
                     <h5 class="mb-3 text-white">Localização</h5>
                     <ul class="list-unstyled support-list">
-                      <li class="mb-2 d-flex align-items-center">
+                      <li class="mb-2 d-flex align-items-center d-none">
                         <span class="ti-location-pin me-2"></span>
                         Delaware State File Number: 4879197
                       </li>
@@ -1799,13 +1521,13 @@
                         <span class="ti-location-pin me-2"></span>
                         16192 Coastal Highway, <br />Lewes, Delaware - USA
                       </li>
-                      <li class="mb-2 d-flex align-items-center">
+                      <li class="mb-2 d-flex align-items-center d-none">
                         <span class="ti-mobile me-2"></span>
                         <a href="tel:+61283766284"> +61 2 8376 6284</a>
                       </li>
                       <li class="mb-2 d-flex align-items-center">
                         <span class="ti-email me-2"></span
-                        ><a href="mailto:mail@example.com">
+                        ><a href="mailto:info@mybiz.international">
                           info@mybiz.international</a
                         >
                       </li>
@@ -1827,7 +1549,7 @@
               <div class="col-md-6 col-lg-7">
                 <div class="copyright-wrap small-text">
                   <p class="mb-0 text-white">
-                    © Copyrights 2024 My Biz All rights reserved.
+                    © Copyrights 2024 MyBiz USA LLC, Todos os direitos reservados.
                   </p>
                 </div>
               </div>
@@ -1835,13 +1557,13 @@
                 <div class="terms-policy-wrap text-md-end text-start">
                   <ul class="list-inline">
                     <li class="list-inline-item">
-                      <a class="small-text" href="#">Termos</a>
+                      <a class="small-text" href="/pdf/termo-de-uso.pdf" target="_blank">Termos</a>
                     </li>
                     <li class="list-inline-item">
-                      <a class="small-text" href="#">Politíca de Privacidade</a>
+                      <a class="small-text" href="/pdf/politica-de-privacidade-mybiz.pdf" target="_blank">Política de Privacidade</a>
                     </li>
                     <li class="list-inline-item">
-                      <a class="small-text" href="#">Contato</a>
+                      <a class="small-text" href="tel:+61283766284">Contato</a>
                     </li>
                   </ul>
                 </div>
